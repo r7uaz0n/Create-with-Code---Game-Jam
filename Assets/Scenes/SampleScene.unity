@@ -1439,18 +1439,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7777853, y: 0.18486595, z: 0.17154026}
   m_Center: {x: -0.0029025078, y: 0.32205963, z: -0.001891613}
---- !u!114 &1127458211
-MonoBehaviour:
+--- !u!54 &1127458210
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127458208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f274eb70d48d574bbcfec6900ac5cde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1362291617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1755,7 +1759,6 @@ GameObject:
   - component: {fileID: 1560635018}
   - component: {fileID: 1560635017}
   - component: {fileID: 1560635016}
-  - component: {fileID: 1560635020}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1774,7 +1777,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1560635017
@@ -1838,20 +1841,6 @@ Transform:
   m_Father: {fileID: 384166842}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1560635020
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1560635015}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1585849848
 GameObject:
   m_ObjectHideFlags: 0
