@@ -2,7 +2,7 @@
 
 public class DirectionalLight : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // We only need the lighting while editing. It's not supposed to be used in the game.
     void Start()
     {
         Destroy(this.gameObject);
