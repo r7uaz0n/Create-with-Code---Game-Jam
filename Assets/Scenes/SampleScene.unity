@@ -575,7 +575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 13.07, y: 17.9, z: -1.5600001}
+  m_LocalPosition: {x: -6.34, y: 52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -593,6 +593,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebc56bbb02f16dd4d9f08e9ac5e8d70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1268447847}
 --- !u!1 &994195608
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +608,7 @@ GameObject:
   - component: {fileID: 994195610}
   - component: {fileID: 994195613}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ZoomButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
