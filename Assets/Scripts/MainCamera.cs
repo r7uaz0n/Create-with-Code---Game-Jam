@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class MainCamera : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    [SerializeField] private Player player = default;
 
     private Vector3 mapOverviewPosition = new Vector3(5.0f, 52.0f, 0.0f);
-    private Vector3 playerOffset = new Vector3(0.0f, 15.0f, 0.0f);
+    private Vector3 cameraOffsetToPlayer = new Vector3(0.0f, 15.0f, 0.0f);
     private String zoomInText = "Zoom In";
     private String zoomOutText = "Zoom Out";
 
@@ -16,7 +16,7 @@ public class MainCamera : MonoBehaviour
         Room,
         Player
     }
-    private Focus focus = Focus.Player;
+    Focus focus = Focus.Player;
 
     // Gets called when the zoom button is pressed.
     // Returns the text that the zoom button should show next.
@@ -41,12 +41,12 @@ public class MainCamera : MonoBehaviour
         return newButtonText;
     }
 
-    private void Update()
+    void Update()
     {
         switch (focus)
         {
             case Focus.Player:
-                transform.position = player.transform.position + playerOffset;
+                transform.position = player.transform.position + cameraOffsetToPlayer;
                 break;
             case Focus.Map:
                 transform.position = mapOverviewPosition;
