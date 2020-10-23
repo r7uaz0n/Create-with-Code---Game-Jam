@@ -16,7 +16,7 @@ public class DestroyBlocks : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
     }
