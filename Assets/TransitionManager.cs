@@ -1,32 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class TransitionManager : MonoBehaviour
 {
     public enum Transition
     {
-        NotSet = -1,
-        ToRoom1 = 0,
+        NotSet,
+        ToRoom1,
         FromRoom1,
         ToRoom2,
         FromRoom2,
         ToRoom3,
         FromRoom3
     }
-    public Transition lastUsedTransition = default;
+    public static Transition lastUsedTransition = default;
 
-    public string[] sceneNames =
+    static string[] sceneNames =
     {
+        "invalid index",
         "Room1_Justin_Dominic",
         "Map_Rick",
-        "",
+        "future room 2",
         "Map_Rick",
-        "",
+        "future room 3",
         "Map_Rick"
     };
 
-    public void TransitionTo(Transition transition)
+    public static void TransitionTo(Transition transition)
     {
         if (Transition.NotSet == transition)
         {
@@ -37,6 +36,6 @@ public class TransitionManager : MonoBehaviour
             lastUsedTransition = transition;
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNames[(int)transition]);
         }
-       
+
     }
 }
