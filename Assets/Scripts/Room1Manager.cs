@@ -11,19 +11,19 @@ public class Room1Manager : MonoBehaviour
     void Start()
     {
         score = 0;
-        StarCounter.text = "Stars: " + score;
     }
 
     private void Update()
     {
         UpdateScore();
+        //Debug.Log(AnimationScript.wasCollected);
     }
     private void UpdateScore()
     {
-        if (GameState.didCollectKey1 == true)
+       // if (AnimationScript.wasCollected == true)
         {
-            score++;
-
+            score += score;
         }
+        StarCounter.text = "Stars: " + score;
     }
 }

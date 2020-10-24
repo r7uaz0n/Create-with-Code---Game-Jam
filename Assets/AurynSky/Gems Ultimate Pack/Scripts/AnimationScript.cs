@@ -28,7 +28,7 @@ public class AnimationScript : MonoBehaviour {
     public float scaleRate;
     private float scaleTimer;
 
-    private bool wasCollected = false;
+    public bool wasCollected = false;
 	
 	void Update () {
         

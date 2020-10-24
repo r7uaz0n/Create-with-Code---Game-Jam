@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
@@ -7,10 +8,12 @@ public class Player : MonoBehaviour
 
     private float speed = 5.0f;
     private Animator pickSwingAnimator = default;
+    public GameObject RoomInstructions;
 
     private void Start()
     {
         pickSwingAnimator = pick.GetComponent<Animator>();
+        RoomInstructions.SetActive(false);
     }
 
     void Update()
@@ -37,8 +40,17 @@ public class Player : MonoBehaviour
         {
             pick.SetActive(true);
             Destroy(other.gameObject);
+            RoomInstructions.SetActive(true);
+
+            StartCoroutine(PickInstructions());
         }
 
+    }
+
+    IEnumerator PickInstructions()
+    {
+        yield return new WaitForSeconds(3);
+        RoomInstructions.SetActive(false);
     }
 
     void SwingPick()
