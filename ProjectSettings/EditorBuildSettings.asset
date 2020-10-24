@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Door_inside.unity
     guid: 341f811653219db47901eb91701217d1
+  - enabled: 1
+    path: Assets/Scenes/Map_Rick.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Room1_Justin_Dominic.unity
+    guid: a76511d957bf3d04e9cdcc156b36e7d3
   m_configObjects: {}
