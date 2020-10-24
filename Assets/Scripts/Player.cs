@@ -6,13 +6,13 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject pick = default;
 
     private float speed = 5.0f;
-    private Animation pickSwingAnimation = default;
-    private bool hasPick = false;
+    private Animator pickSwingAnimator = default;
 
     private void Start()
     {
-        pickSwingAnimation = pick.GetComponent<Animation>();
+        pickSwingAnimator = pick.GetComponent<Animator>();
     }
+
     void Update()
     {
         UpdateMovement();
@@ -35,7 +35,6 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.name == pickPowerUp.gameObject.name)
         {
-            hasPick = true;
             pick.SetActive(true);
             Destroy(other.gameObject);
         }
@@ -44,10 +43,7 @@ public class Player : MonoBehaviour
 
     void SwingPick()
     {
-        if (hasPick == true && Input.GetKeyDown(KeyCode.Space))
-        {
-            //pickSwingAnimation.Play();
-        }
+        pickSwingAnimator.enabled = Input.GetKey(KeyCode.Space);
     }
 
 }
