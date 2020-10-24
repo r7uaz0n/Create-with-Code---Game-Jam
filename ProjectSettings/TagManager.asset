@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Quarry Block
   - PickPowerup
+  - Undefined
+  - Pick
   layers:
   - Default
   - TransparentFX

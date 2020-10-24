@@ -46,6 +46,7 @@ public class Player : MonoBehaviour
     {
         if (hasPick == true && Input.GetKeyDown(KeyCode.Space))
         {
+            //Pick.SetActive(true);
             anim.Play();
         }
     }

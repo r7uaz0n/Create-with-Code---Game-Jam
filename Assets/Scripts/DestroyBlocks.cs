@@ -18,6 +18,9 @@ public class DestroyBlocks : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        if (other.CompareTag("Pick"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
