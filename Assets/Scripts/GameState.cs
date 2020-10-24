@@ -1,11 +1,11 @@
 ﻿public class GameState
 {
-    public static int keyCounter = 0;
-
-    private static readonly int maximumKeys = 1;
+    public static bool didCollectKey1 = false;
+    public static bool didCollectKey2 = false;
+    public static bool didCollectKey3 = false;
 
     public bool isExitRequirementMet()
     {
-        return keyCounter == maximumKeys;
+        return didCollectKey1 && didCollectKey2 && didCollectKey3;
     }
 }

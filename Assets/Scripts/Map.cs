@@ -9,7 +9,6 @@ public class Map : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("keys: " + GameState.keyCounter);
         switch (TransitionManager.lastUsedTransition)
         {
             case TransitionManager.Transition.FromRoom1:
