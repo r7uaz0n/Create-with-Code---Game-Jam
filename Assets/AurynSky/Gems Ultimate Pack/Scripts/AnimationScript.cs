@@ -5,6 +5,7 @@ using UnityEngine.SocialPlatforms.GameCenter;
 public class AnimationScript : MonoBehaviour {
 
     [SerializeField] private Player player = default;
+    [SerializeField] private GameState.KeyId keyId = default;
 
     public bool isAnimated = false;
 
@@ -90,7 +91,7 @@ public class AnimationScript : MonoBehaviour {
         if (null != player && player.gameObject.name == collider.gameObject.name)
         {
             wasCollected = true;
-            GameState.didCollectKey1 = true;
+            GameState.collectKeyWith(keyId);
             floatSpeed = Mathf.Abs(floatSpeed);
             room1Manager.UpdateScore();
         }
