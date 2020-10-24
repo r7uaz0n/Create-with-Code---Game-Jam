@@ -602,6 +602,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &341979707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1989284832963933156, guid: 8b7519ca12ddfbe46aea7c43a91d32ab,
+    type: 3}
+  m_PrefabInstance: {fileID: 444869902}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &358738867 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
@@ -1294,6 +1300,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1989284832963933156, guid: 8b7519ca12ddfbe46aea7c43a91d32ab,
         type: 3}
+    - target: {fileID: 8048580174082615781, guid: b4a3f3ffd080d8049a126bf726eb34d0,
+        type: 3}
+      propertyPath: pick
+      value: 
+      objectReference: {fileID: 1149494799}
+    - target: {fileID: 8048580174082615781, guid: b4a3f3ffd080d8049a126bf726eb34d0,
+        type: 3}
+      propertyPath: pickPowerUp
+      value: 
+      objectReference: {fileID: 341979707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4a3f3ffd080d8049a126bf726eb34d0, type: 3}
 --- !u!1001 &1388296935
