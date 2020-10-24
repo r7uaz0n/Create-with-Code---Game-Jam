@@ -18,11 +18,11 @@ public class TransitionManager : MonoBehaviour
     static string[] sceneNames =
     {
         "invalid index",
-        "Room1_Justin_Dominic",
+        "Room1_Justin_Dominic 1",
         "Map_Rick",
-        "Room2_Rick",
+        "Room2_Rick_new",
         "Map_Rick",
-        "future room 3",
+        "Room3",
         "Map_Rick",
         "End_Game"
     };

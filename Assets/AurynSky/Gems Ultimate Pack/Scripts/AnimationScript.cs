@@ -93,7 +93,7 @@ public class AnimationScript : MonoBehaviour {
             wasCollected = true;
             GameState.collectKeyWith(keyId);
             floatSpeed = Mathf.Abs(floatSpeed);
-            room1Manager.UpdateScore();
+            //room1Manager.UpdateScore();
         }
     }
 }
