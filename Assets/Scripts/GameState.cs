@@ -14,6 +14,27 @@ public static class GameState
     private static bool didCollectKey2 = false;
     private static bool didCollectKey3 = false;
 
+    public static bool checkKeyCollectionStatus(KeyId keyId)
+    {
+        bool wasAlreadyCollected = default;
+        switch (keyId)
+        {
+            case KeyId.Room1:
+                wasAlreadyCollected = didCollectKey1;
+                break;
+            case KeyId.Room2:
+                wasAlreadyCollected = didCollectKey2;
+                break;
+            case KeyId.Room3:
+                wasAlreadyCollected = didCollectKey3;
+                break;
+            default:
+                UnityEngine.Debug.LogError("Transition state not set (only valid at the beginning of the game).");
+                break;
+        }
+        return wasAlreadyCollected;
+    }
+
     public static void collectKeyWith(KeyId keyId)
     {
         switch (keyId)
