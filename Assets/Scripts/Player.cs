@@ -3,17 +3,20 @@
 public class Player : MonoBehaviour
 {
     private float speed = 5.0f;
-    public GameObject pickPrefab;
+
     public bool hasPick;
+    private GameObject Pick;
+    private Animation anim;
 
     private void Start()
     {
         hasPick = false;
+        Pick = GameObject.Find("Pick");
+        anim = Pick.GetComponent<Animation>();
     }
     void Update()
     {
         UpdateMovement();
-        pickPrefab.SetActive(false);
         SwingPick();
     }
 
@@ -31,20 +34,23 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Pick"))
+        if (other.CompareTag("PickPowerup"))
         {
-            pickPrefab.SetActive(true);
             hasPick = true;
             Destroy(other.gameObject);
         }
 
     }
 
-    private void SwingPick()
+    void SwingPick()
     {
- 
+        if (hasPick == true && Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.Play();
+        }
     }
-    //pickTransform = transform.Find("Pick");
-    //pickTransform.transform.localPosition = Vector3.Slerp(pickTransform.localPosition, new Vector3(1, 0, 1), 0.01f);
+    
 }
 
+////References
+//https://answers.unity.com/questions/1086481/how-do-you-write-a-script-for-swinging-a-sword-or.html

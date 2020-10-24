@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Quarry Block
-  - Pick
+  - PickPowerup
   layers:
   - Default
   - TransparentFX
