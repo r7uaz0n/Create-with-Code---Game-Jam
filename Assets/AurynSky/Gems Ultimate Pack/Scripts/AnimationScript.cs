@@ -89,7 +89,7 @@ public class AnimationScript : MonoBehaviour {
         if (null != player && player.gameObject.name == collider.gameObject.name)
         {
             wasCollected = true;
-            GameState.keyCounter++;
+            GameState.didCollectKey1 = true;
             floatSpeed = Mathf.Abs(floatSpeed);
         }
     }
