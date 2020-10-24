@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.SceneManagement;
+using System;
 
 public class Room1Manager : MonoBehaviour
 {
@@ -9,8 +11,8 @@ public class Room1Manager : MonoBehaviour
     public TextMeshProUGUI StarCounter;
     public Player player;
     public GameObject Roominstructions;
-
-    //public AnimationScript animationScript;
+    public AnimationScript animationScript;
+    private Boolean scoreAdded;
 
     void Start()
     {
@@ -37,11 +39,12 @@ public class Room1Manager : MonoBehaviour
     }
     public void UpdateScore()
     {
-       //if (animationScript.wasCollected == true)
-       // {
-         
-       // }
-        StarCounter.text = "Stars: " + score;
+       if (animationScript.wasCollected == true && scoreAdded == false)
+       {
+            score++;
+       }
+       StarCounter.text = "Stars: " + score;
+        scoreAdded = true;
     }
 }
 
