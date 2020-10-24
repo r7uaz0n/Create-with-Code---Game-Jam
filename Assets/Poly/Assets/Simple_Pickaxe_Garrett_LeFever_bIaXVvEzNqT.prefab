@@ -88,8 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3746624646101688950}
-  - component: {fileID: 5008854931911700114}
   - component: {fileID: 137429120168406204}
+  - component: {fileID: 1149494800}
   m_Layer: 0
   m_Name: Simple_Pickaxe_Garrett_LeFever_bIaXVvEzNqT
   m_TagString: Pick
@@ -112,19 +112,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5008854931911700114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1325988500166620235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec0c7f9abd0af2840a99d45af7227d62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  asset: {fileID: 11400000, guid: fccad522b8d593547ae0c14161ebdcce, type: 2}
 --- !u!65 &137429120168406204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -138,3 +125,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7680614, y: 0.82935536, z: 0.17724511}
   m_Center: {x: 0.007963121, y: -0.0018153787, z: -0.0013668388}
+--- !u!95 &1149494800
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325988500166620235}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7952706266347d245b1a52228fa52afd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

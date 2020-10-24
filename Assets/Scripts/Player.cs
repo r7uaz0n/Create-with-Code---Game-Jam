@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == pickPowerUp.gameObject.name)
+        if (null != pickPowerUp.gameObject && pickPowerUp.gameObject.name == other.gameObject.name)
         {
             pick.SetActive(true);
             Destroy(other.gameObject);
@@ -47,6 +47,3 @@ public class Player : MonoBehaviour
     }
 
 }
-
-////References
-//https://answers.unity.com/questions/1086481/how-do-you-write-a-script-for-swinging-a-sword-or.html
