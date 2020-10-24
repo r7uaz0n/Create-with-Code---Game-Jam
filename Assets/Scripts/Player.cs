@@ -9,11 +9,16 @@ public class Player : MonoBehaviour
     private float speed = 5.0f;
     private Animator pickSwingAnimator = default;
     public GameObject RoomInstructions;
+    public AudioClip pickSwingSound;
+    public AudioClip starSound;
+
+    private AudioSource playerAudio;
 
     private void Start()
     {
         pickSwingAnimator = pick.GetComponent<Animator>();
         RoomInstructions.SetActive(false);
+        playerAudio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -41,7 +46,6 @@ public class Player : MonoBehaviour
             pick.SetActive(true);
             Destroy(other.gameObject);
             RoomInstructions.SetActive(true);
-
             StartCoroutine(PickInstructions());
         }
 
@@ -56,6 +60,7 @@ public class Player : MonoBehaviour
     void SwingPick()
     {
         pickSwingAnimator.enabled = Input.GetKey(KeyCode.Space);
+        //playerAudio.PlayOneShot(pickSwingSound, 1.0f);
     }
 
 }

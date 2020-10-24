@@ -7,7 +7,7 @@ public class Room1Manager : MonoBehaviour
 {
     public int score;
     public TextMeshProUGUI StarCounter;
-    
+    public AnimationScript animationScript;
 
     void Start()
     {
@@ -17,11 +17,11 @@ public class Room1Manager : MonoBehaviour
     private void Update()
     {
         UpdateScore();
-        //Debug.Log(AnimationScript.wasCollected);
+        Debug.Log(animationScript.wasCollected);
     }
     private void UpdateScore()
     {
-       // if (AnimationScript.wasCollected == true)
+       if (animationScript.wasCollected == true)
         {
             score += score;
         }
