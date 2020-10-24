@@ -7,6 +7,7 @@ public class LaunchPickAxe : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject pickaxePrefab;
+    public Vector3 offset; 
     void Start()
     {
         
@@ -17,7 +18,7 @@ public class LaunchPickAxe : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(pickaxePrefab, transform.position, pickaxePrefab.transform.rotation);
+            Instantiate(pickaxePrefab, transform.position + offset, pickaxePrefab.transform.rotation);
         }   
     }
 }

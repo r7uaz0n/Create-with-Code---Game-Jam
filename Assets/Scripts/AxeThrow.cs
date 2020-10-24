@@ -15,7 +15,7 @@ public class AxeThrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * Time.deltaTime * throwspeed);
+        transform.Translate(-Vector3.left * Time.deltaTime * throwspeed);
  
     }
 }
