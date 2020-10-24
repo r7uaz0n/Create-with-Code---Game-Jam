@@ -46,14 +46,10 @@ public class Player : MonoBehaviour
             pick.SetActive(true);
             activeInstructions = true;
             Destroy(other.gameObject);
-            StartCoroutine(PickInstructions());
         }
     }
 
-    IEnumerator PickInstructions()
-    {
-        yield return new WaitForSeconds(3);
-    }
+
 
     void SwingPick()
     {
