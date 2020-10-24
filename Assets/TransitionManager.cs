@@ -34,7 +34,8 @@ public class TransitionManager : MonoBehaviour
         else
         {
             lastUsedTransition = transition;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNames[(int)transition]);
+            string scenenToLoad = sceneNames[(int)transition];
+            UnityEngine.SceneManagement.SceneManager.LoadScene(scenenToLoad);
         }
 
     }
