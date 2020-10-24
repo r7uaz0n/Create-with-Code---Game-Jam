@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour
     private GameObject player;
 
 
-    // Start is called before the    first frame update
+    // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
@@ -25,10 +25,12 @@ public class Enemy : MonoBehaviour
 
         // MOve the enemy towards the player based off a set speed
         enemyRb.AddForce(lookDirection * speed);
-
-        if (transform.position.y < -10)
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            TransitionManager.TransitionTo(TransitionManager.Transition.FromRoom2);
         }
     }
 

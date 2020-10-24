@@ -20,7 +20,7 @@ public class TransitionManager : MonoBehaviour
         "invalid index",
         "Room1_Justin_Dominic",
         "Map_Rick",
-        "future room 2",
+        "Room2_Rick",
         "Map_Rick",
         "future room 3",
         "Map_Rick",
