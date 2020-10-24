@@ -7,7 +7,10 @@ public class Room1Manager : MonoBehaviour
 {
     public int score;
     public TextMeshProUGUI StarCounter;
-    public AnimationScript animationScript;
+    public Player player;
+    public GameObject Roominstructions;
+
+    //public AnimationScript animationScript;
 
     void Start()
     {
@@ -17,14 +20,29 @@ public class Room1Manager : MonoBehaviour
     private void Update()
     {
         UpdateScore();
-        Debug.Log(animationScript.wasCollected);
-    }
-    private void UpdateScore()
-    {
-       if (animationScript.wasCollected == true)
+        //      Debug.Log(animationScript.wasCollected);
+        if (player.activeInstructions == true)
         {
-            score += score;
+            Roominstructions.SetActive(true);
+            StartCoroutine(PickInstructions());
         }
+
+    }
+
+    IEnumerator PickInstructions()
+    {
+        yield return new WaitForSeconds(3);
+        player.activeInstructions = false;
+        Roominstructions.SetActive(false);
+    }
+    public void UpdateScore()
+    {
+       //if (animationScript.wasCollected == true)
+       // {
+         
+       // }
         StarCounter.text = "Stars: " + score;
     }
 }
+
+

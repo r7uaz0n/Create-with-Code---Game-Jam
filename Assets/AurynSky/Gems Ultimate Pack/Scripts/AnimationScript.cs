@@ -29,8 +29,9 @@ public class AnimationScript : MonoBehaviour {
     private float scaleTimer;
 
     public bool wasCollected = false;
-	
-	void Update () {
+    public Room1Manager room1Manager;
+
+    void Update () {
         
         if(isAnimated)
         {
@@ -91,6 +92,7 @@ public class AnimationScript : MonoBehaviour {
             wasCollected = true;
             GameState.didCollectKey1 = true;
             floatSpeed = Mathf.Abs(floatSpeed);
+            room1Manager.UpdateScore();
         }
     }
 }

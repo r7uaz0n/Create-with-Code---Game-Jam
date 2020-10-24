@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -8,17 +9,16 @@ public class Player : MonoBehaviour
 
     private float speed = 5.0f;
     private Animator pickSwingAnimator = default;
-    public GameObject RoomInstructions;
     public AudioClip pickSwingSound;
     public AudioClip starSound;
-
     private AudioSource playerAudio;
+    public Boolean activeInstructions;
 
     private void Start()
     {
         pickSwingAnimator = pick.GetComponent<Animator>();
-        RoomInstructions.SetActive(false);
         playerAudio = GetComponent<AudioSource>();
+        activeInstructions = false;
     }
 
     void Update()
@@ -44,18 +44,11 @@ public class Player : MonoBehaviour
         if (null != pickPowerUp.gameObject && pickPowerUp.gameObject.name == other.gameObject.name)
         {
             pick.SetActive(true);
+            activeInstructions = true;
             Destroy(other.gameObject);
-            RoomInstructions.SetActive(true);
-            StartCoroutine(PickInstructions());
         }
-
     }
 
-    IEnumerator PickInstructions()
-    {
-        yield return new WaitForSeconds(3);
-        RoomInstructions.SetActive(false);
-    }
 
     void SwingPick()
     {
