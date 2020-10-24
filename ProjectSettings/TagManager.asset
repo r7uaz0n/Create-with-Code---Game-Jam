@@ -8,6 +8,7 @@ TagManager:
   - PickPowerup
   - Undefined
   - Pick
+  - Enemy
   layers:
   - Default
   - TransparentFX
