@@ -1291,7 +1291,6 @@ RectTransform:
   - {fileID: 281672666}
   - {fileID: 555502169}
   - {fileID: 1888941225}
-  - {fileID: 917204119}
   - {fileID: 1089602521}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1873,9 +1872,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de75b3b15cffa684eadecfdd9d959451, type: 3}
-<<<<<<< HEAD
---- !u!1001 &917204118
-=======
 --- !u!1 &938150282
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,82 +1997,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1001 &950350369
->>>>>>> 34334b8ab645b9e44340fe155fc6db3d3202e09a
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 581727671}
-    m_Modifications:
-    - target: {fileID: 3950881656738517221, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_Name
-      value: Quarry Block (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -88.44
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -53.739998
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: de75b3b15cffa684eadecfdd9d959451, type: 3}
---- !u!4 &917204119 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
-    type: 3}
-  m_PrefabInstance: {fileID: 917204118}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &950350369
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3051,7 +2971,7 @@ PrefabInstance:
     - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8977371575597561427, guid: de75b3b15cffa684eadecfdd9d959451,
         type: 3}
@@ -4126,9 +4046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281726a44ee3dd04bab46e34224ffecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  room1: {fileID: 1585849848}
-  room2: {fileID: 1552935729}
-  room3: {fileID: 709885728}
 --- !u!65 &1556487551
 BoxCollider:
   m_ObjectHideFlags: 0
