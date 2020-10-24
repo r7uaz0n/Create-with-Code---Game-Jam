@@ -1,5 +1,6 @@
 ﻿using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.GameCenter;
 
 public class AnimationScript : MonoBehaviour {
 
@@ -88,6 +89,7 @@ public class AnimationScript : MonoBehaviour {
         if (null != player && player.gameObject.name == collider.gameObject.name)
         {
             wasCollected = true;
+            GameState.keyCounter++;
             floatSpeed = Mathf.Abs(floatSpeed);
         }
     }
