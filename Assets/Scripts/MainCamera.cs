@@ -7,6 +7,8 @@ public class MainCamera : MonoBehaviour
 
     private Vector3 mapOverviewPosition = new Vector3(5.0f, 52.0f, 0.0f);
     private Vector3 cameraOffsetToPlayer = new Vector3(0.0f, 15.0f, 0.0f);
+    private Vector3 cameraOffsetToRoom = new Vector3(0.0f, 17.0f, 0.0f);
+    private GameObject roomToFocusOn = default;
     private String zoomInText = "Zoom In";
     private String zoomOutText = "Zoom Out";
 
@@ -35,10 +37,29 @@ public class MainCamera : MonoBehaviour
                 newButtonText = zoomOutText;
                 break;
             case Focus.Room:
+                // Zoom should not be changed while inside a room.
                 break;
         }
 
         return newButtonText;
+    }
+
+    public void PlayerInDoorToRoom(GameObject room)
+    {
+        if (player.gameObject.GetComponent<MeshRenderer>().bounds.Intersects(room.GetComponent<MeshRenderer>().bounds))
+        {
+            // Player is inside the room.
+            focus = Focus.Room;
+            roomToFocusOn = room;
+        }
+        else
+        {
+            // Player is outside the room.
+            if (Focus.Room == focus)
+            {
+                focus = Focus.Player;
+            }
+        }
     }
 
     void Update()
@@ -52,6 +73,14 @@ public class MainCamera : MonoBehaviour
                 transform.position = mapOverviewPosition;
                 break;
             case Focus.Room:
+                if (null != roomToFocusOn)
+                {
+                    transform.position = roomToFocusOn.transform.position + cameraOffsetToRoom;
+                }
+                else
+                {
+                    Debug.LogError("roomToFocusOn must not be null.");
+                }
                 break;
         }
     }
