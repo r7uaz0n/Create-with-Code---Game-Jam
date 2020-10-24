@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     {
         hasPick = false;
         Pick = GameObject.Find("Pick");
-        anim = Pick.GetComponent<Animation>();
+        //anim = Pick.GetComponent<Animation>();
     }
     void Update()
     {
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         if (hasPick == true && Input.GetKeyDown(KeyCode.Space))
         {
             //Pick.SetActive(true);
-            anim.Play();
+            //anim.Play();
         }
     }
     
