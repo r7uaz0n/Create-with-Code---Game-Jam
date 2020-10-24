@@ -13,7 +13,6 @@ public class MainCamera : MonoBehaviour
     enum Focus
     {
         Map,
-        Room,
         Player
     }
     Focus focus = Focus.Player;
@@ -34,8 +33,6 @@ public class MainCamera : MonoBehaviour
                 focus = Focus.Player;
                 newButtonText = zoomOutText;
                 break;
-            case Focus.Room:
-                break;
         }
 
         return newButtonText;
@@ -50,8 +47,6 @@ public class MainCamera : MonoBehaviour
                 break;
             case Focus.Map:
                 transform.position = mapOverviewPosition;
-                break;
-            case Focus.Room:
                 break;
         }
     }

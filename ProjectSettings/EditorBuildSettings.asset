@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Door_outside_Dominic.unity
+    guid: 1bf977c3cbd3b7d4e81616e53a3a63fe
+  - enabled: 1
+    path: Assets/Scenes/Door_inside.unity
+    guid: 341f811653219db47901eb91701217d1
   m_configObjects: {}
