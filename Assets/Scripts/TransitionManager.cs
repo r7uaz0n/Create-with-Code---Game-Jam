@@ -10,7 +10,8 @@ public class TransitionManager : MonoBehaviour
         ToRoom2,
         FromRoom2,
         ToRoom3,
-        FromRoom3
+        FromRoom3,
+        LevelEnd
     }
     public static Transition lastUsedTransition = default;
 
@@ -22,7 +23,8 @@ public class TransitionManager : MonoBehaviour
         "future room 2",
         "Map_Rick",
         "future room 3",
-        "Map_Rick"
+        "Map_Rick",
+        "End_Game"
     };
 
     public static void TransitionTo(Transition transition)
