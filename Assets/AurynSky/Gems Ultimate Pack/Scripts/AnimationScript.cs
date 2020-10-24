@@ -1,12 +1,14 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using UnityEditor.Rendering;
+using UnityEngine;
 
 public class AnimationScript : MonoBehaviour {
+
+    [SerializeField] private Player player = default;
 
     public bool isAnimated = false;
 
     public bool isRotating = false;
-    public bool isFloating = false;
+    [SerializeField] private bool isFloating = false;
     public bool isScaling = false;
 
     public Vector3 rotationAngle;
@@ -25,21 +27,17 @@ public class AnimationScript : MonoBehaviour {
     public float scaleRate;
     private float scaleTimer;
 
-	// Use this for initialization
-	void Start () {
+    private bool wasCollected = false;
 	
-	}
-	
-	// Update is called once per frame
 	void Update () {
-
-       
         
         if(isAnimated)
         {
             if(isRotating)
             {
-                transform.Rotate(rotationAngle * rotationSpeed * Time.deltaTime);
+                Vector3 rotation = rotationAngle * rotationSpeed * Time.deltaTime;
+                rotation *= wasCollected ? 15 : 1;
+                transform.Rotate(rotation);
             }
 
             if(isFloating)
@@ -48,14 +46,13 @@ public class AnimationScript : MonoBehaviour {
                 Vector3 moveDir = new Vector3(0.0f, 0.0f, floatSpeed);
                 transform.Translate(moveDir);
 
-                if (goingUp && floatTimer >= floatRate)
+                if (!wasCollected && goingUp && floatTimer >= floatRate)
                 {
                     goingUp = false;
                     floatTimer = 0;
                     floatSpeed = -floatSpeed;
                 }
-
-                else if(!goingUp && floatTimer >= floatRate)
+                else if(!wasCollected && !goingUp && floatTimer >= floatRate)
                 {
                     goingUp = true;
                     floatTimer = 0;
@@ -63,7 +60,7 @@ public class AnimationScript : MonoBehaviour {
                 }
             }
 
-            if(isScaling)
+            if(!wasCollected && isScaling)
             {
                 scaleTimer += Time.deltaTime;
 
@@ -85,4 +82,13 @@ public class AnimationScript : MonoBehaviour {
             }
         }
 	}
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (null != player && player.gameObject.name == collider.gameObject.name)
+        {
+            wasCollected = true;
+            floatSpeed = Mathf.Abs(floatSpeed);
+        }
+    }
 }
