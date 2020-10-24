@@ -7,6 +7,7 @@ public class Room1Manager : MonoBehaviour
 {
     public int score;
     public TextMeshProUGUI StarCounter;
+    
 
     void Start()
     {
