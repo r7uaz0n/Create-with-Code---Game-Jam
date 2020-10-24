@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
 
     private float speed = 5.0f;
     private Animator pickSwingAnimator = default;
-    public GameObject RoomInstructions;
     public AudioClip pickSwingSound;
     public AudioClip starSound;
 
@@ -17,7 +16,6 @@ public class Player : MonoBehaviour
     private void Start()
     {
         pickSwingAnimator = pick.GetComponent<Animator>();
-        RoomInstructions.SetActive(false);
         playerAudio = GetComponent<AudioSource>();
     }
 
@@ -45,7 +43,6 @@ public class Player : MonoBehaviour
         {
             pick.SetActive(true);
             Destroy(other.gameObject);
-            RoomInstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
 
@@ -54,7 +51,6 @@ public class Player : MonoBehaviour
     IEnumerator PickInstructions()
     {
         yield return new WaitForSeconds(3);
-        RoomInstructions.SetActive(false);
     }
 
     void SwingPick()
