@@ -89,13 +89,14 @@ GameObject:
   m_Component:
   - component: {fileID: 3746624646101688950}
   - component: {fileID: 5008854931911700114}
+  - component: {fileID: 137429120168406204}
   m_Layer: 0
   m_Name: Simple_Pickaxe_Garrett_LeFever_bIaXVvEzNqT
-  m_TagString: Untagged
+  m_TagString: Pick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3746624646101688950
 Transform:
   m_ObjectHideFlags: 0
@@ -124,3 +125,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asset: {fileID: 11400000, guid: fccad522b8d593547ae0c14161ebdcce, type: 2}
+--- !u!65 &137429120168406204
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325988500166620235}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7680614, y: 0.82935536, z: 0.17724511}
+  m_Center: {x: 0.007963121, y: -0.0018153787, z: -0.0013668388}
