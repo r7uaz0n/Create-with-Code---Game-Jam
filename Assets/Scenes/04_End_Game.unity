@@ -238,8 +238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: -532}
-  m_SizeDelta: {x: 200, y: 400}
+  m_AnchoredPosition: {x: -110, y: -832}
+  m_SizeDelta: {x: 200, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225043746
 MonoBehaviour:
@@ -314,15 +314,15 @@ RectTransform:
   m_GameObject: {fileID: 1096103994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1.62}
   m_Children: []
   m_Father: {fileID: 1226740173}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 214.2, y: -532}
-  m_SizeDelta: {x: 400, y: 400}
+  m_AnchoredPosition: {x: 214.2, y: -832.00006}
+  m_SizeDelta: {x: 400, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096103996
 MonoBehaviour:
@@ -373,9 +373,39 @@ MonoBehaviour:
     (https://tinyurl.com/sc-kantouth)
 
 
+    danlucaz
+
+    (https://tinyurl.com/sc-danlucaz)
+
+
     NenadSimic
 
-    (https://tinyurl.com/sc-NenadSimic)'
+    (https://tinyurl.com/sc-NenadSimic)
+
+
+    Splashzooka
+
+    (https://tinyurl.com/sc-Splashzooka)
+
+
+    dheming
+
+    (https://tinyurl.com/sc-dheming)
+
+
+    littlerobotsoundfactory
+
+    (https://tinyurl.com/sc-littlerobotsoundfactory)
+
+
+    robinhood76
+
+    (https://tinyurl.com/sc-robinhood76)
+
+
+    matrixxx
+
+    (https://tinyurl.com/sc-matrixxx)'
 --- !u!222 &1096103997
 CanvasRenderer:
   m_ObjectHideFlags: 0

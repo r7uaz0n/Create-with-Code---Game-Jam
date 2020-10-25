@@ -26,6 +26,7 @@ public class Room3Manager : MonoBehaviour
 
     Trigger[] triggers = default;
     bool[] triggerIds = { false, false, false, false, false, false };
+    bool triggersBlocked = false;
 
     void Start()
     {
@@ -36,6 +37,11 @@ public class Room3Manager : MonoBehaviour
 
     public void playerTouched(int triggerId)
     {
+        if (triggersBlocked)
+        {
+            return;
+        }
+
         if (checkIfOrderIsCorrect(triggerId))
         {
             triggerIds[triggerId] = true;
@@ -59,9 +65,10 @@ public class Room3Manager : MonoBehaviour
             {
                 Trigger trigger = triggers[i];
                 trigger.gameObject.GetComponent<MeshRenderer>().material = failMaterial;
-                StartCoroutine(resetMaterial());
-                soundManager.playFailSound();
             }
+            soundManager.playFailSound();
+            StartCoroutine(resetMaterial());
+            triggersBlocked = true;
             for (int i = 0; i < triggerIds.Length; i++)
             {
                 triggerIds[i] = false;
@@ -129,6 +136,7 @@ public class Room3Manager : MonoBehaviour
             Trigger trigger = triggers[i];
             trigger.gameObject.GetComponent<MeshRenderer>().material = initialMaterial;
         }
+        triggersBlocked = false;
     }
 
 }
