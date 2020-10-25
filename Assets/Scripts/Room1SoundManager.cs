@@ -34,15 +34,13 @@ public class Room1SoundManager : MonoBehaviour
             StartCoroutine(PlaySoundAfterDelay());
         }
     }
-
-    IEnumerator PlaySoundAfterDelay()
+        IEnumerator PlaySoundAfterDelay()
     {
         yield return new WaitForSeconds(1);
         audioSource.PlayOneShot(RocksFallingClip);
     }
 
-
-    public void PlayCubeChisellingSound()
+        public void PlayCubeChisellingSound()
     {
         audioSource.PlayOneShot(CubeChisellingClip,0.1f);
     }
