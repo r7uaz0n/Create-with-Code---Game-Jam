@@ -9581,9 +9581,6 @@ MonoBehaviour:
   score: 0
   StarCounter: {fileID: 1906196879}
   player: {fileID: 1046226519}
-  Roominstructions: {fileID: 0}
-  Softstar: {fileID: 0}
-  animationScript: {fileID: 0}
 --- !u!4 &640673313
 Transform:
   m_ObjectHideFlags: 0
@@ -13129,7 +13126,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.4
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -13237,6 +13234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf976e76a1df7334fbb3f4e054ab6255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StarLiftoffClip: {fileID: 8300000, guid: 9b098b83b888f1f42b25ffc1df69749a, type: 3}
 --- !u!43 &901715417
 Mesh:
   m_ObjectHideFlags: 0

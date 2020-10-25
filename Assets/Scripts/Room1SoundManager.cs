@@ -10,7 +10,6 @@ public class Room1SoundManager : MonoBehaviour
     public AudioClip RocksFallingClip;
     public AudioClip CubeChisellingClip;
     public AudioClip PickUpgradeClip;
-    public AudioClip StarLiftoffClip;
 
     AudioSource audioSource;
 
@@ -34,24 +33,18 @@ public class Room1SoundManager : MonoBehaviour
             StartCoroutine(PlaySoundAfterDelay());
         }
     }
-
-    IEnumerator PlaySoundAfterDelay()
+        IEnumerator PlaySoundAfterDelay()
     {
         yield return new WaitForSeconds(1);
         audioSource.PlayOneShot(RocksFallingClip);
     }
 
-
-    public void PlayCubeChisellingSound()
+        public void PlayCubeChisellingSound()
     {
         audioSource.PlayOneShot(CubeChisellingClip,0.1f);
     }
     public void PlayPickUpgradeSound()
     {
         audioSource.PlayOneShot(PickUpgradeClip,0.05f);
-    }
-    public void PlayStarLiftoffSound()
-    {
-        audioSource.PlayOneShot(StarLiftoffClip);
     }
 }

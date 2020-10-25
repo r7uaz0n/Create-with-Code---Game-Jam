@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -7,7 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject pickPowerUp = default;
     [SerializeField] private GameObject pick = default;
 
-    private float speed = 5.0f;
+    private static float speed = 5.0f;
+    private float regularspeed = 5.0f;
+    private float turbospeed = 20.0f;
     private Animator pickSwingAnimator = default;
     public AudioClip pickSwingSound;
     public AudioClip starSound;
@@ -29,6 +32,14 @@ public class Player : MonoBehaviour
 
     private void UpdateMovement()
     {
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            speed = turbospeed;
+        }
+        else
+        {
+            speed = regularspeed;
+        }
         float inputX = Input.GetAxis("Horizontal");
         float inputZ = Input.GetAxis("Vertical");
 
