@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1455730449}
   m_Layer: 0
   m_Name: SoftStar
-  m_TagString: Untagged
+  m_TagString: Softstar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 8048580174082615781, guid: b4a3f3ffd080d8049a126bf726eb34d0, type: 3}
+  keyId: 0
   isAnimated: 1
   isRotating: 1
   isFloating: 1
