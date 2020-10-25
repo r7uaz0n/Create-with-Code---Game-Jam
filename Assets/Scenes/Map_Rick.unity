@@ -9592,10 +9592,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89244bd1379469440ad09e6dc7bdfa43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keyId: 0
-  score: 0
-  StarCounter: {fileID: 1906196879}
   player: {fileID: 1046226519}
+  StarCounter: {fileID: 1906196879}
 --- !u!4 &640673313
 Transform:
   m_ObjectHideFlags: 0
@@ -15794,7 +15792,7 @@ PrefabInstance:
     - target: {fileID: 8048580174082615780, guid: b4a3f3ffd080d8049a126bf726eb34d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.59
+      value: 27.56
       objectReference: {fileID: 0}
     - target: {fileID: 8048580174082615780, guid: b4a3f3ffd080d8049a126bf726eb34d0,
         type: 3}
@@ -15804,7 +15802,7 @@ PrefabInstance:
     - target: {fileID: 8048580174082615780, guid: b4a3f3ffd080d8049a126bf726eb34d0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.73
+      value: -21.07
       objectReference: {fileID: 0}
     - target: {fileID: 8048580174082615780, guid: b4a3f3ffd080d8049a126bf726eb34d0,
         type: 3}

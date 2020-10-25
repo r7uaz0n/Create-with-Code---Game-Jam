@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-public static class GameState
+﻿public static class GameState
 {
     public enum KeyId : int
     {
@@ -14,7 +12,18 @@ public static class GameState
     private static bool didCollectKey2 = false;
     private static bool didCollectKey3 = false;
 
-    public static bool checkKeyCollectionStatus(KeyId keyId)
+    public static int Score()
+    {
+        bool[] keys = { didCollectKey1, didCollectKey2, didCollectKey3 };
+        int score = 0;
+        for (int i=0; i<keys.Length; i++)
+        {
+            score += keys[i] ? 1 : 0;
+        }
+        return score;
+    }
+
+    public static bool CheckKeyCollectionStatus(KeyId keyId)
     {
         bool wasAlreadyCollected = default;
         switch (keyId)
@@ -35,7 +44,7 @@ public static class GameState
         return wasAlreadyCollected;
     }
 
-    public static void collectKeyWith(KeyId keyId)
+    public static void CollectKeyWith(KeyId keyId)
     {
         switch (keyId)
         {

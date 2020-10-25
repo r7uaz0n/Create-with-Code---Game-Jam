@@ -21,12 +21,12 @@ public class Room2Manager : MonoBehaviour
     void Start()
     {
         //prevent star in room 2 from being collected twice
-        if (GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
+        if (GameState.CheckKeyCollectionStatus(GameState.KeyId.Room2))
         {
             score = 1;
             Softstar.SetActive(false);
         }
-        else if (!GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
+        else if (!GameState.CheckKeyCollectionStatus(GameState.KeyId.Room2))
         {
             score = 0;
             scoreAdded = false;

@@ -28,7 +28,7 @@ public class Room1SoundManager : MonoBehaviour
 
     private void Start()
     {
-        if (!GameState.checkKeyCollectionStatus(GameState.KeyId.Room1))
+        if (!GameState.CheckKeyCollectionStatus(GameState.KeyId.Room1))
         {
             audioSource = GetComponent<AudioSource>();
             StartCoroutine(PlaySoundAfterDelay());
