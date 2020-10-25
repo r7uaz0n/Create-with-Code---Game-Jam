@@ -11,9 +11,11 @@ public class GameSoundManager : MonoBehaviour
     AudioSource audioSource;
     private void Awake()
     {
+       
         int numMusicPlayers = FindObjectsOfType<GameSoundManager>().Length;
         if (numMusicPlayers > 1)
         {
+            print("Destroying Game Sound Manager");
             Destroy(gameObject);
         }
         else
