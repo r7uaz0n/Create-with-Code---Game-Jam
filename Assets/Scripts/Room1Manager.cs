@@ -44,11 +44,8 @@ public class Room1Manager : MonoBehaviour
             Roominstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
-       Debug.Log(GameState.checkKeyCollectionStatus(GameState.KeyId.Room1));
-
-
+       //Debug.Log(GameState.checkKeyCollectionStatus(GameState.KeyId.Room1));
     }
-
     IEnumerator PickInstructions()
     {
         yield return new WaitForSeconds(3);
@@ -57,12 +54,13 @@ public class Room1Manager : MonoBehaviour
     }
     public void UpdateScore()
     {
-       if (animationScript.wasCollected == true)
+       if (animationScript.wasCollected == true && scoreAdded == false)
        {
-            score++;
-       }
-       StarCounter.text = "Stars: " + score;
-        scoreAdded = true;
+            score = score +1;
+            scoreAdded = true;
+        }
+        StarCounter.text = "Stars: " + score;
+
     }
 }
 
