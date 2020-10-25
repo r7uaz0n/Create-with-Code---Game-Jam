@@ -7,17 +7,33 @@ using System;
 
 public class Room1Manager : MonoBehaviour
 {
+    [SerializeField] private GameState.KeyId keyId = default;
+
     public int score;
     public TextMeshProUGUI StarCounter;
     public Player player;
+
     public GameObject Roominstructions;
+    public GameObject Softstar;
     public AnimationScript animationScript;
-    private Boolean scoreAdded;
+    private Boolean scoreAdded; 
 
     void Start()
     {
-        score = 0;
+        //prevent star in room 1 from being collected twice
+        if (GameState.checkKeyCollectionStatus(GameState.KeyId.Room1))
+        {
+            score = 1;
+            Softstar.SetActive(false);
+        }
+        else if (!GameState.checkKeyCollectionStatus(GameState.KeyId.Room1))
+        {
+            score = 0;
+            scoreAdded = false;
+            Softstar.SetActive(true);
+        }
     }
+
 
     private void Update()
     {
@@ -28,6 +44,8 @@ public class Room1Manager : MonoBehaviour
             Roominstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
+       Debug.Log(GameState.checkKeyCollectionStatus(GameState.KeyId.Room1));
+
 
     }
 
@@ -39,7 +57,7 @@ public class Room1Manager : MonoBehaviour
     }
     public void UpdateScore()
     {
-       if (animationScript.wasCollected == true && scoreAdded == false)
+       if (animationScript.wasCollected == true)
        {
             score++;
        }
