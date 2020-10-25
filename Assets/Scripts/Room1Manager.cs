@@ -41,6 +41,7 @@ public class Room1Manager : MonoBehaviour
         //      Debug.Log(animationScript.wasCollected);
         if (player.activeInstructions == true)
         {
+            Room1SoundManager.instance.PlayPickUpgradeSound();
             Roominstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
