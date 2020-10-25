@@ -278,7 +278,35 @@ MonoBehaviour:
 
 
 
-    Sounds Artists'
+    Sounds Artists
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Materials'
 --- !u!222 &225043747
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -321,8 +349,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 214.2, y: -832.00006}
-  m_SizeDelta: {x: 400, y: 1000}
+  m_AnchoredPosition: {x: 214.2, y: -875.6}
+  m_SizeDelta: {x: 400, y: 1087.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096103996
 MonoBehaviour:
@@ -358,7 +386,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'JustinChow
 
-    0thell0
+    projektivity
 
     dodoTV42
 
@@ -401,6 +429,18 @@ MonoBehaviour:
     robinhood76
 
     (https://tinyurl.com/sc-robinhood76)
+
+
+    Hand
+    Painted Seamless Wood Texture Vol - 6
+
+    by Innovana Games
+
+
+    PBR Marble
+    Floor textures by Games for Net
+
+
 
 
     matrixxx
