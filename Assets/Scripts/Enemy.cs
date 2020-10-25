@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 0.5f;
     private Rigidbody enemyRb;
     private GameObject player;
 
@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         // the enemy should move towards the the player
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
 
-        // MOve the enemy towards the player based off a set speed
+        // Move the enemy towards the player based off a set speed
         enemyRb.AddForce(lookDirection * speed);
     }
     private void OnCollisionEnter(Collision collision)
