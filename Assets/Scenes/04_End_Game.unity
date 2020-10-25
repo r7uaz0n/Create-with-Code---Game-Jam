@@ -238,8 +238,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -110, y: -832}
-  m_SizeDelta: {x: 200, y: 1000}
+  m_AnchoredPosition: {x: -110, y: -1000}
+  m_SizeDelta: {x: 200, y: 1300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225043746
 MonoBehaviour:
@@ -279,6 +279,7 @@ MonoBehaviour:
 
 
     Sounds Artists
+
 
 
 
@@ -349,8 +350,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 214.2, y: -875.6}
-  m_SizeDelta: {x: 400, y: 1087.123}
+  m_AnchoredPosition: {x: 214.2, y: -1000}
+  m_SizeDelta: {x: 400, y: 1300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096103996
 MonoBehaviour:
@@ -384,68 +385,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'JustinChow
-
-    projektivity
-
-    dodoTV42
-
-
-    grunz
-
-    (https://tinyurl.com/sc-grunz)
-
-
-    kantouth
-
-    (https://tinyurl.com/sc-kantouth)
-
-
-    danlucaz
-
-    (https://tinyurl.com/sc-danlucaz)
-
-
-    NenadSimic
-
-    (https://tinyurl.com/sc-NenadSimic)
-
-
-    Splashzooka
-
-    (https://tinyurl.com/sc-Splashzooka)
-
-
-    dheming
-
-    (https://tinyurl.com/sc-dheming)
-
-
-    littlerobotsoundfactory
-
-    (https://tinyurl.com/sc-littlerobotsoundfactory)
-
-
-    robinhood76
-
-    (https://tinyurl.com/sc-robinhood76)
-
-
-    Hand
-    Painted Seamless Wood Texture Vol - 6
-
-    by Innovana Games
-
-
-    PBR Marble
-    Floor textures by Games for Net
-
-
-
-
-    matrixxx
-
-    (https://tinyurl.com/sc-matrixxx)'
+  m_Text: "JustinChow\nprojektivity\ndodoTV42\n\ngrunz\n(https://tinyurl.com/sc-grunz)\n\nkantouth\n(https://tinyurl.com/sc-kantouth)\n\ndanlucaz\n(https://tinyurl.com/sc-danlucaz)\n\nNenadSimic\n(https://tinyurl.com/sc-NenadSimic)\n\nSplashzooka\n(https://tinyurl.com/sc-Splashzooka)\n\ndheming\n(https://tinyurl.com/sc-dheming)\n\nlittlerobotsoundfactory\n(https://tinyurl.com/sc-littlerobotsoundfactory)\n\nrobinhood76\n(https://tinyurl.com/sc-robinhood76)\n\nmatrixxx\n(https://tinyurl.com/sc-matrixxx)\n\nHand
+    Painted Seamless Wood Texture Vol - 6\nby Innovana Games\n\nPBR Marble Floor
+    textures \nby Games for Net\n\nSimple Gems Ultimate Animated Customizable Pack
+    \nby AurynSky\n\nFive Seamless Tileable Ground Textures\nby A3D\n"
 --- !u!222 &1096103997
 CanvasRenderer:
   m_ObjectHideFlags: 0
