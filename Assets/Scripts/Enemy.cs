@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 0.5f;
+    private float speed = 2.0f;
     private Rigidbody enemyRb;
     private GameObject player;
 

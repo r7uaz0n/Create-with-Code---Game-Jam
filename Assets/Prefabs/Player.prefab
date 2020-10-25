@@ -59,8 +59,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 25
+  m_Intensity: 1.5
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -235,6 +235,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickPowerUp: {fileID: 0}
   pick: {fileID: 1325988499992597550}
+  pickSwingSound: {fileID: 0}
+  starSound: {fileID: 0}
+  activeInstructions: 0
 --- !u!1001 &383836261
 PrefabInstance:
   m_ObjectHideFlags: 0
