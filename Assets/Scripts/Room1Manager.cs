@@ -9,6 +9,7 @@ public class Room1Manager : MonoBehaviour
     [SerializeField] GameObject softStar;
     [SerializeField] GameObject quarry;
     [SerializeField] GameObject pickPowerUp;
+    [SerializeField] GameObject invisibleBarrier;
 
     void Start()
     {
@@ -16,6 +17,8 @@ public class Room1Manager : MonoBehaviour
         softStar.SetActive(!key1CollectionStatus);
         quarry.SetActive(!key1CollectionStatus);
         pickPowerUp.SetActive(!key1CollectionStatus);
+        invisibleBarrier.SetActive(!key1CollectionStatus);
+        StartCoroutine(BlockPlayer());
     }
 
     private void Update()
@@ -29,6 +32,11 @@ public class Room1Manager : MonoBehaviour
         }
     }
 
+    IEnumerator BlockPlayer()
+    {
+        yield return new WaitForSeconds(2f);
+        invisibleBarrier.SetActive(false);
+    }
     IEnumerator PickInstructions()
     {
         yield return new WaitForSeconds(3);

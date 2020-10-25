@@ -7,13 +7,15 @@ public class Enemy : MonoBehaviour
     private float speed = 2.0f;
     private Rigidbody enemyRb;
     private GameObject player;
-
+    public AudioClip enemyBumpSound;
+    private AudioSource playerAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
         player = GameObject.Find("Player");
+        playerAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -30,7 +32,13 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+
             TransitionManager.TransitionTo(TransitionManager.Transition.FromRoom2);
+            playerAudio.PlayOneShot(enemyBumpSound, 1.0f);
+        }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            playerAudio.PlayOneShot(enemyBumpSound, 1.0f);
         }
     }
 
