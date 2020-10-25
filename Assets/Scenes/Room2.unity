@@ -235,6 +235,12 @@ PrefabInstance:
       propertyPath: playerBumpSound
       value: 
       objectReference: {fileID: 8300000, guid: c54fd86e00281384dbd3142283319979, type: 3}
+    - target: {fileID: 1022997644999530156, guid: 2a76d7e177c8db44a86325fa5f28373c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 617febb142513a448b54845c63fd117e,
+        type: 2}
     - target: {fileID: 1022997644999530159, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -840,6 +846,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8048580173478148588, guid: b4a3f3ffd080d8049a126bf726eb34d0,
+        type: 3}
+      propertyPath: m_Range
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8048580174082615776, guid: b4a3f3ffd080d8049a126bf726eb34d0,
         type: 3}
       propertyPath: m_Name
@@ -1149,6 +1160,12 @@ PrefabInstance:
       propertyPath: playerBumpSound
       value: 
       objectReference: {fileID: 8300000, guid: c54fd86e00281384dbd3142283319979, type: 3}
+    - target: {fileID: 1022997644999530156, guid: 2a76d7e177c8db44a86325fa5f28373c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 617febb142513a448b54845c63fd117e,
+        type: 2}
     - target: {fileID: 1022997644999530159, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,7 +1224,7 @@ PrefabInstance:
     - target: {fileID: 1022997645711818308, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_Intensity
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1022997645711818308, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
@@ -1244,6 +1261,12 @@ PrefabInstance:
       propertyPath: playerBumpSound
       value: 
       objectReference: {fileID: 8300000, guid: c54fd86e00281384dbd3142283319979, type: 3}
+    - target: {fileID: 1022997644999530156, guid: 2a76d7e177c8db44a86325fa5f28373c,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 617febb142513a448b54845c63fd117e,
+        type: 2}
     - target: {fileID: 1022997644999530159, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1302,7 +1325,7 @@ PrefabInstance:
     - target: {fileID: 1022997645711818308, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_Intensity
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a76d7e177c8db44a86325fa5f28373c, type: 3}
