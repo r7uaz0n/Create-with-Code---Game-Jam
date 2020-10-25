@@ -20,7 +20,7 @@
         {
             score += keys[i] ? 1 : 0;
         }
-        return "Stars: " + score + " / 3"; ;
+        return "Stars: " + score + " / 3";
     }
 
     public static bool CheckKeyCollectionStatus(KeyId keyId)
