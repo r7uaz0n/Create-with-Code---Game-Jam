@@ -230,6 +230,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1022997644999530155, guid: 2a76d7e177c8db44a86325fa5f28373c,
+        type: 3}
+      propertyPath: playerBumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c54fd86e00281384dbd3142283319979, type: 3}
     - target: {fileID: 1022997644999530159, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1139,6 +1144,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1022997644999530155, guid: 2a76d7e177c8db44a86325fa5f28373c,
+        type: 3}
+      propertyPath: playerBumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c54fd86e00281384dbd3142283319979, type: 3}
     - target: {fileID: 1022997644999530159, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1229,6 +1239,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1022997644999530155, guid: 2a76d7e177c8db44a86325fa5f28373c,
+        type: 3}
+      propertyPath: playerBumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c54fd86e00281384dbd3142283319979, type: 3}
     - target: {fileID: 1022997644999530159, guid: 2a76d7e177c8db44a86325fa5f28373c,
         type: 3}
       propertyPath: m_LocalPosition.x

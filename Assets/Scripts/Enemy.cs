@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     private Rigidbody enemyRb;
     private GameObject player;
     public AudioClip enemyBumpSound;
+    public AudioClip playerBumpSound;
     private AudioSource playerAudio;
 
     // Start is called before the first frame update
@@ -34,7 +35,7 @@ public class Enemy : MonoBehaviour
         {
 
             TransitionManager.TransitionTo(TransitionManager.Transition.FromRoom2);
-            playerAudio.PlayOneShot(enemyBumpSound, 1.0f);
+            playerAudio.PlayOneShot(playerBumpSound, 1.0f);
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
