@@ -15,6 +15,8 @@ public class Room1Manager : MonoBehaviour
 
     public GameObject Roominstructions;
     public GameObject Softstar;
+    public GameObject Quarry;
+    public GameObject PickPowerup;
     public AnimationScript animationScript;
     private Boolean scoreAdded; 
 
@@ -25,12 +27,16 @@ public class Room1Manager : MonoBehaviour
         {
             score = 1;
             Softstar.SetActive(false);
+            Quarry.SetActive(false);
+            PickPowerup.SetActive(false);
         }
         else if (!GameState.checkKeyCollectionStatus(GameState.KeyId.Room1))
         {
             score = 0;
             scoreAdded = false;
             Softstar.SetActive(true);
+            Quarry.SetActive(true);
+            PickPowerup.SetActive(true);
         }
     }
 

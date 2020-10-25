@@ -774,7 +774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72514668}
   m_LocalRotation: {x: -0, y: -0, z: -0.0318892, w: 0.9994914}
-  m_LocalPosition: {x: 1.32, y: 3.58, z: -2.99}
+  m_LocalPosition: {x: 1.54, y: 7.09, z: -2.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1818156207}
@@ -1962,7 +1962,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 855.2, y: -25}
+  m_AnchoredPosition: {x: 641.8, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &184976730
@@ -2455,7 +2455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229660632}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10.96, z: 0}
+  m_LocalPosition: {x: 3.72, y: 10.96, z: -2.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3180,9 +3180,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef2135d3ef58aa74ab99b9457d73922b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeChisellingClip: {fileID: 8300000, guid: 16f5eb6f040e80c46b1ebc39128c062e, type: 3}
-  PickUpgradeClip: {fileID: 8300000, guid: 1373ab0a541eb724ab72154d6d824754, type: 3}
-  StarLiftoffClip: {fileID: 0}
+  RocksFallingClip: {fileID: 8300000, guid: f905bf3b697e2fa4e83f66cefbeeb43a, type: 3}
+  CubeChisellingClip: {fileID: 8300000, guid: 7b89e4da2e4151546b512b562e0c5032, type: 3}
+  PickUpgradeClip: {fileID: 8300000, guid: 874e1983def252d43b6aacddbda89143, type: 3}
+  StarLiftoffClip: {fileID: 8300000, guid: 9b098b83b888f1f42b25ffc1df69749a, type: 3}
 --- !u!82 &295418134
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3193,7 +3194,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f905bf3b697e2fa4e83f66cefbeeb43a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -9865,7 +9866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062598850}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.14, y: -3.62, z: -6.81}
+  m_LocalPosition: {x: -2.14, y: -3.62, z: -5.46}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10668,6 +10669,8 @@ MonoBehaviour:
   player: {fileID: 836813432}
   Roominstructions: {fileID: 1062598850}
   Softstar: {fileID: 1935104042}
+  Quarry: {fileID: 72514668}
+  PickPowerup: {fileID: 1613461101}
   animationScript: {fileID: 1860934645}
 --- !u!4 &1139433943
 Transform:
