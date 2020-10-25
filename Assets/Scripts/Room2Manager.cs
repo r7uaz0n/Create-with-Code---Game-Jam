@@ -3,15 +3,17 @@ using UnityEngine;
 
 public class Room2Manager : MonoBehaviour
 {
-    [SerializeField] Player player;
-    [SerializeField] StarCounter starCounter;
-    [SerializeField] GameObject roomInstructions;
-    [SerializeField] GameObject softStar;
+    [SerializeField] Player player = default;
+    [SerializeField] StarCounter starCounter = default;
+    [SerializeField] GameObject roomInstructions = default;
+    [SerializeField] GameObject softStar = default;
+    [SerializeField] GameObject directionalLight = default;
+    [SerializeField] GameObject enemy1 = default;
+    [SerializeField] GameObject enemy2 = default;
 
     void Start()
     {
-        bool key2CollectionStatus = GameState.CheckKeyCollectionStatus(GameState.KeyId.Room2);
-        softStar.SetActive(!key2CollectionStatus);
+        CheckKeyStatus();
     }
 
     private void Update()
@@ -33,4 +35,13 @@ public class Room2Manager : MonoBehaviour
     {
         starCounter.UpdateScoreText();
     }
+    void CheckKeyStatus()
+    {
+        bool keyCollectionStatus = GameState.CheckKeyCollectionStatus(GameState.KeyId.Room2);
+        enemy1.SetActive(!keyCollectionStatus);
+        enemy2.SetActive(!keyCollectionStatus);
+        softStar.SetActive(!keyCollectionStatus);
+        directionalLight.SetActive(keyCollectionStatus);
+    }
+
 }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using TMPro;
 
 public class RoomThreeManager : MonoBehaviour
 {
@@ -16,18 +15,19 @@ public class RoomThreeManager : MonoBehaviour
     [SerializeField] GameObject wall1 = default;
     [SerializeField] GameObject wall2 = default;
 
+    [SerializeField] GameObject starIcon = default;
     [SerializeField] StarCounter starCounter;
 
     [SerializeField] GameObject directionalLight = default;
 
-    private Trigger[] triggers = default;
-    private bool[] triggerIds = { false, false, false, false, false, false };
+    Trigger[] triggers = default;
+    bool[] triggerIds = { false, false, false, false, false, false };
 
     void Start()
     {
         NullChecks();
-        directionalLight.SetActive(false);
         triggers = new Trigger[] { trigger1, trigger2, trigger3, trigger4, trigger5, trigger6 };
+        CheckKeyStatus();
     }
 
     public void playerTouched(int triggerId)
@@ -50,6 +50,10 @@ public class RoomThreeManager : MonoBehaviour
             {
                 Trigger trigger = triggers[i];
                 trigger.gameObject.GetComponent<MeshRenderer>().material = purpleMaterial;
+            }
+            for (int i = 0; i < triggerIds.Length; i++)
+            {
+                triggerIds[i] = false;
             }
         }
     }
@@ -90,5 +94,19 @@ public class RoomThreeManager : MonoBehaviour
         {
             Debug.LogError("directionalLight is null.");
         }
+    }
+
+    void CheckKeyStatus()
+    {
+        bool keyCollectionStatus = GameState.CheckKeyCollectionStatus(GameState.KeyId.Room3);
+        for (int i = 0; i < triggers.Length; i++)
+        {
+            Trigger trigger = triggers[i];
+            trigger.gameObject.SetActive(!keyCollectionStatus);
+        }
+        wall1.SetActive(!keyCollectionStatus);
+        wall2.SetActive(!keyCollectionStatus);
+        starIcon.SetActive(!keyCollectionStatus);
+        directionalLight.SetActive(keyCollectionStatus);
     }
 }
