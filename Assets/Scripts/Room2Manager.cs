@@ -21,7 +21,7 @@ public class Room2Manager : MonoBehaviour
     void Start()
     {
         //   PlayerPrefs.SetInt("StarCounter", score);
-        PlayerPrefs.GetInt("StarCounter", score).ToString();
+       // PlayerPrefs.GetInt("StarCounter", score).ToString();
 
         //prevent star in room 2 from being collected twice
         if (GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
@@ -66,7 +66,7 @@ public class Room2Manager : MonoBehaviour
         }
         StarCounter.text = "Stars: " + score;
 
-        PlayerPrefs.SetInt("StarCounter", score);
+        //PlayerPrefs.SetInt("StarCounter", score);
 
     }
 }
