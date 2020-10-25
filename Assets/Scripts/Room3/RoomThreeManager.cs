@@ -1,22 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using TMPro;
 
 public class RoomThreeManager : MonoBehaviour
 {
-    [SerializeField] private Trigger trigger1 = default;
-    [SerializeField] private Trigger trigger2 = default;
-    [SerializeField] private Trigger trigger3 = default;
-    [SerializeField] private Trigger trigger4 = default;
-    [SerializeField] private Trigger trigger5 = default;
-    [SerializeField] private Trigger trigger6 = default;
+    [SerializeField] Trigger trigger1 = default;
+    [SerializeField] Trigger trigger2 = default;
+    [SerializeField] Trigger trigger3 = default;
+    [SerializeField] Trigger trigger4 = default;
+    [SerializeField] Trigger trigger5 = default;
+    [SerializeField] Trigger trigger6 = default;
 
-    [SerializeField] private Material purpleMaterial = default;
-    [SerializeField] private Material greenMaterial = default;
+    [SerializeField] Material purpleMaterial = default;
+    [SerializeField] Material greenMaterial = default;
 
-    [SerializeField] private GameObject wall1 = default;
-    [SerializeField] private GameObject wall2 = default;
+    [SerializeField] GameObject wall1 = default;
+    [SerializeField] GameObject wall2 = default;
+
+    [SerializeField] StarCounter starCounter;
 
     [SerializeField] private GameObject directionalLight = default;
 

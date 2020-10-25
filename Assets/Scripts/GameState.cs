@@ -12,7 +12,7 @@
     private static bool didCollectKey2 = false;
     private static bool didCollectKey3 = false;
 
-    public static int Score()
+    public static string ScoreText()
     {
         bool[] keys = { didCollectKey1, didCollectKey2, didCollectKey3 };
         int score = 0;
@@ -20,7 +20,7 @@
         {
             score += keys[i] ? 1 : 0;
         }
-        return score;
+        return "Stars: " + score + " / 3"; ;
     }
 
     public static bool CheckKeyCollectionStatus(KeyId keyId)

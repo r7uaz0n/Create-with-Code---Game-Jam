@@ -1,30 +1,23 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEditor.SceneManagement;
-using System;
 
 public class Room1Manager : MonoBehaviour
 {
-    [SerializeField] private GameState.KeyId keyId = default;
-
-    public int score = GameState.Score();
-    public TextMeshProUGUI StarCounter;
-    public Player player;
-
-    public GameObject Roominstructions;
-    public GameObject Softstar;
-    public GameObject Quarry;
-    public GameObject PickPowerup;
-    public AnimationScript animationScript;
+    [SerializeField] Player player; 
+    [SerializeField] StarCounter starCounter;
+    [SerializeField] GameObject roominstructions;
+    [SerializeField] GameObject softStar;
+    [SerializeField] GameObject quarry;
+    [SerializeField] GameObject pickPowerUp;
+    [SerializeField] AnimationScript animationScript;
 
     void Start()
     {
         bool key1CollectionStatus = GameState.CheckKeyCollectionStatus(GameState.KeyId.Room1);
-        Softstar.SetActive(!key1CollectionStatus);
-        Quarry.SetActive(!key1CollectionStatus);
-        PickPowerup.SetActive(!key1CollectionStatus);
+        softStar.SetActive(!key1CollectionStatus);
+        quarry.SetActive(!key1CollectionStatus);
+        pickPowerUp.SetActive(!key1CollectionStatus);
     }
 
     private void Update()
@@ -33,7 +26,7 @@ public class Room1Manager : MonoBehaviour
         if (player.activeInstructions == true)
         {
             Room1SoundManager.instance.PlayPickUpgradeSound();
-            Roominstructions.SetActive(true);
+            roominstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
     }
@@ -42,11 +35,11 @@ public class Room1Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         player.activeInstructions = false;
-        Roominstructions.SetActive(false);
+        roominstructions.SetActive(false);
     }
 
     public void UpdateScore()
     {
-        StarCounter.text = "Stars: " + GameState.Score() + " / 3";
+        starCounter.UpdateScoreText();
     }
 }

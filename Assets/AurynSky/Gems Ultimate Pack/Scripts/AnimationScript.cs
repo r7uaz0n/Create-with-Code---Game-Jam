@@ -1,35 +1,34 @@
-﻿using UnityEditor.Rendering;
-using UnityEngine;
-using UnityEngine.SocialPlatforms.GameCenter;
+﻿using UnityEngine;
 
 public class AnimationScript : MonoBehaviour {
 
-    [SerializeField] private Player player = default;
-    [SerializeField] private GameState.KeyId keyId = default;
+    [SerializeField] Player player = default;
+    [SerializeField] GameState.KeyId keyId = default;
+    bool wasCollected = false;
 
-    public bool isAnimated = false;
+    // Animation status in general
+    [SerializeField] bool isAnimated = false;
+    [SerializeField] bool isRotating = false;
+    [SerializeField] bool isFloating = false;
+    [SerializeField] bool isScaling = false;
 
-    public bool isRotating = false;
-    [SerializeField] private bool isFloating = false;
-    public bool isScaling = false;
+    // Rotation
+    [SerializeField] Vector3 rotationAngle;
+    [SerializeField] float rotationSpeed;
 
-    public Vector3 rotationAngle;
-    public float rotationSpeed;
+    // Floating
+    [SerializeField] float floatSpeed;
+    bool goingUp = true;
+    [SerializeField] float floatRate;
+    float floatTimer;
 
-    public float floatSpeed;
-    private bool goingUp = true;
-    public float floatRate;
-    private float floatTimer;
-   
-    public Vector3 startScale;
-    public Vector3 endScale;
-
-    private bool scalingUp = true;
-    public float scaleSpeed;
-    public float scaleRate;
+    // Scaling
+    [SerializeField] Vector3 startScale;
+    [SerializeField] Vector3 endScale;
+    bool scalingUp = true;
+    [SerializeField] float scaleSpeed;
+    [SerializeField] float scaleRate;
     private float scaleTimer;
-
-    public bool wasCollected = false;
 
     void Update () {
         
@@ -90,8 +89,6 @@ public class AnimationScript : MonoBehaviour {
         if (null != player && player.gameObject.name == collider.gameObject.name)
         {
             wasCollected = true;
-            //print(GameSoundManager.instance == null);
-            //Room1SoundManager.instance.PlayStarLiftoffSound();
             GameSoundManager.instance.PlayStarLiftoffSound();
             GameState.CollectKeyWith(keyId);
             floatSpeed = Mathf.Abs(floatSpeed);
