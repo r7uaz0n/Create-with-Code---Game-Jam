@@ -314,7 +314,7 @@ RectTransform:
   m_GameObject: {fileID: 1096103994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1.62}
   m_Children: []
   m_Father: {fileID: 1226740173}
   m_RootOrder: 4
@@ -373,9 +373,39 @@ MonoBehaviour:
     (https://tinyurl.com/sc-kantouth)
 
 
+    danlucaz
+
+    (https://tinyurl.com/sc-danlucaz)
+
+
     NenadSimic
 
-    (https://tinyurl.com/sc-NenadSimic)'
+    (https://tinyurl.com/sc-NenadSimic)
+
+
+    Splashzooka
+
+    (https://tinyurl.com/sc-Splashzooka)
+
+
+    dheming
+
+    (https://tinyurl.com/sc-dheming)
+
+
+    littlerobotsoundfactory
+
+    (https://tinyurl.com/sc-littlerobotsoundfactory)
+
+
+    robinhood76
+
+    (https://tinyurl.com/sc-robinhood76)
+
+
+    matrixxx
+
+    (https://tinyurl.com/sc-matrixxx)'
 --- !u!222 &1096103997
 CanvasRenderer:
   m_ObjectHideFlags: 0
