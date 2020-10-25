@@ -91,6 +91,7 @@ public class AnimationScript : MonoBehaviour {
         if (null != player && player.gameObject.name == collider.gameObject.name)
         {
             wasCollected = true;
+            Room1SoundManager.instance.PlayStarLiftoffSound();
             GameState.collectKeyWith(keyId);
             floatSpeed = Mathf.Abs(floatSpeed);
             //room1Manager.UpdateScore();
