@@ -1145,10 +1145,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728b13b93bf8ffb449e1a2dcc7989224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keyId: 0
   score: 0
   StarCounter: {fileID: 184976730}
   player: {fileID: 836813432}
   Roominstructions: {fileID: 1062598850}
+  Softstar: {fileID: 1935104042}
   animationScript: {fileID: 1860934645}
 --- !u!4 &1139433943
 Transform:
@@ -2166,7 +2168,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1916010941}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1935104042}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ff967b7ed48f2441bcf509edf6b889a, type: 3}
@@ -2452,6 +2454,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f226a393243a0141bace5fd6b60bafa, type: 3}
+--- !u!1 &1935104042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000010986879176, guid: 8f226a393243a0141bace5fd6b60bafa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1916010941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1991020458
 PrefabInstance:
   m_ObjectHideFlags: 0
