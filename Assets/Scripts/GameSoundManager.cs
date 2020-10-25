@@ -5,7 +5,21 @@ using UnityEngine;
 
 public class GameSoundManager : MonoBehaviour
 {
-    public static GameSoundManager instance;
+    private static GameSoundManager _instance;
+
+    public static GameSoundManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<GameSoundManager>();
+            }
+
+            return _instance;
+        }
+    }
+
     public AudioClip StarLiftoffClip;
 
     AudioSource audioSource;

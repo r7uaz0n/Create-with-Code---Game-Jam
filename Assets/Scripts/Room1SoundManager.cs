@@ -10,6 +10,7 @@ public class Room1SoundManager : MonoBehaviour
     public AudioClip RocksFallingClip;
     public AudioClip CubeChisellingClip;
     public AudioClip PickUpgradeClip;
+    public AudioClip StarLiftoffClip;
 
     AudioSource audioSource;
 
@@ -46,5 +47,9 @@ public class Room1SoundManager : MonoBehaviour
     public void PlayPickUpgradeSound()
     {
         audioSource.PlayOneShot(PickUpgradeClip,0.05f);
+    }
+    public void PlayStarLiftoffSound()
+    {
+        audioSource.PlayOneShot(StarLiftoffClip);
     }
 }
