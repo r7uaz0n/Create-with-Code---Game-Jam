@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
-public class RoomThreeManager : MonoBehaviour
+public class Room3Manager : MonoBehaviour
 {
     [SerializeField] Trigger trigger1 = default;
     [SerializeField] Trigger trigger2 = default;
@@ -9,8 +10,9 @@ public class RoomThreeManager : MonoBehaviour
     [SerializeField] Trigger trigger5 = default;
     [SerializeField] Trigger trigger6 = default;
 
-    [SerializeField] Material purpleMaterial = default;
-    [SerializeField] Material greenMaterial = default;
+    [SerializeField] Material initialMaterial = default;
+    [SerializeField] Material successMaterial = default;
+    [SerializeField] Material failMaterial = default;
 
     [SerializeField] GameObject wall1 = default;
     [SerializeField] GameObject wall2 = default;
@@ -19,6 +21,8 @@ public class RoomThreeManager : MonoBehaviour
     [SerializeField] StarCounter starCounter;
 
     [SerializeField] GameObject directionalLight = default;
+
+    [SerializeField] Room3SoundManager soundManager = default;
 
     Trigger[] triggers = default;
     bool[] triggerIds = { false, false, false, false, false, false };
@@ -36,12 +40,17 @@ public class RoomThreeManager : MonoBehaviour
         {
             triggerIds[triggerId] = true;
             Trigger trigger = triggers[triggerId];
-            trigger.gameObject.GetComponent<MeshRenderer>().material = greenMaterial;
+            trigger.gameObject.GetComponent<MeshRenderer>().material = successMaterial;
             if (triggers.Length - 1 == triggerId)
             {
                 directionalLight.SetActive(true);
                 Destroy(wall1);
                 Destroy(wall2);
+                soundManager.playRoomCompleteSound();
+            }
+            else
+            {
+                soundManager.playSuccessSound();
             }
         }
         else
@@ -49,7 +58,9 @@ public class RoomThreeManager : MonoBehaviour
             for (int i = 0; i < triggers.Length; i++)
             {
                 Trigger trigger = triggers[i];
-                trigger.gameObject.GetComponent<MeshRenderer>().material = purpleMaterial;
+                trigger.gameObject.GetComponent<MeshRenderer>().material = failMaterial;
+                StartCoroutine(resetMaterial());
+                soundManager.playFailSound();
             }
             for (int i = 0; i < triggerIds.Length; i++)
             {
@@ -82,7 +93,7 @@ public class RoomThreeManager : MonoBehaviour
         {
             Debug.LogError("At least one trigger is null.");
         }
-        if (!purpleMaterial || !greenMaterial)
+        if (!initialMaterial || !successMaterial)
         {
             Debug.LogError("At least one material is null.");
         }
@@ -109,4 +120,15 @@ public class RoomThreeManager : MonoBehaviour
         starIcon.SetActive(!keyCollectionStatus);
         directionalLight.SetActive(keyCollectionStatus);
     }
+
+    IEnumerator resetMaterial()
+    {
+        yield return new WaitForSeconds(1.5f);
+        for (int i = 0; i < triggers.Length; i++)
+        {
+            Trigger trigger = triggers[i];
+            trigger.gameObject.GetComponent<MeshRenderer>().material = initialMaterial;
+        }
+    }
+
 }

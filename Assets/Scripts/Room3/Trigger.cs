@@ -6,7 +6,7 @@ public class Trigger : MonoBehaviour
 {
     [SerializeField] private Player player = default;
     [SerializeField] private int triggerId = default;
-    [SerializeField] private RoomThreeManager roomThreeManager = default;
+    [SerializeField] private Room3Manager roomThreeManager = default;
 
     private void OnCollisionEnter(Collision collision)
     {
