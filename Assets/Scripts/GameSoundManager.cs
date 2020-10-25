@@ -22,7 +22,7 @@ public class GameSoundManager : MonoBehaviour
 
     public AudioClip StarLiftoffClip;
 
-    AudioSource audioSource;
+    public AudioSource audioSource;
     private void Awake()
     {
        

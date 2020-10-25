@@ -48,8 +48,8 @@ public class Room1SoundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(PickUpgradeClip,0.05f);
     }
-    public void PlayStarLiftoffSound()
-    {
-        audioSource.PlayOneShot(StarLiftoffClip);
-    }
+    //public void PlayStarLiftoffSound()
+    //{
+    //    audioSource.PlayOneShot(StarLiftoffClip);
+    //}
 }

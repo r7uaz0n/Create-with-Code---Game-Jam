@@ -91,8 +91,8 @@ public class AnimationScript : MonoBehaviour {
         {
             wasCollected = true;
             //print(GameSoundManager.instance == null);
-            Room1SoundManager.instance.PlayStarLiftoffSound();
-            //GameSoundManager.instance.PlayStarLiftoffSound();
+            //Room1SoundManager.instance.PlayStarLiftoffSound();
+            GameSoundManager.instance.PlayStarLiftoffSound();
             GameState.collectKeyWith(keyId);
             floatSpeed = Mathf.Abs(floatSpeed);
         }
