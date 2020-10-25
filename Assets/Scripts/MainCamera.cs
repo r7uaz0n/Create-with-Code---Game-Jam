@@ -5,7 +5,7 @@ public class MainCamera : MonoBehaviour
 {
     [SerializeField] private Player player = default;
 
-    private Vector3 mapOverviewPosition = new Vector3(5.0f, 52.0f, 0.0f);
+    private Vector3 mapOverviewPosition = new Vector3(1.5f, 58.5f, 2.5f);
     private Vector3 cameraOffsetToPlayer = new Vector3(0.0f, 15.0f, 0.0f);
     private String zoomInText = "Zoom In";
     private String zoomOutText = "Zoom Out";
