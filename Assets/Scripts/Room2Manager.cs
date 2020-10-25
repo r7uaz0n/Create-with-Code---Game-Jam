@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using TMPro;
 
 public class Room2Manager : MonoBehaviour
 {
@@ -8,7 +7,6 @@ public class Room2Manager : MonoBehaviour
     [SerializeField] StarCounter starCounter;
     [SerializeField] GameObject roomInstructions;
     [SerializeField] GameObject softStar;
-    [SerializeField] AnimationScript animationScript;
 
     void Start()
     {

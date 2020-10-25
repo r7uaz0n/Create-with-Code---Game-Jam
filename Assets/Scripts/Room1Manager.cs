@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using UnityEngine;
-using TMPro;
 
 public class Room1Manager : MonoBehaviour
 {
     [SerializeField] Player player; 
     [SerializeField] StarCounter starCounter;
-    [SerializeField] GameObject roominstructions;
+    [SerializeField] GameObject roomInstructions;
     [SerializeField] GameObject softStar;
     [SerializeField] GameObject quarry;
     [SerializeField] GameObject pickPowerUp;
-    [SerializeField] AnimationScript animationScript;
 
     void Start()
     {
@@ -23,10 +21,10 @@ public class Room1Manager : MonoBehaviour
     private void Update()
     {
         UpdateScore();
-        if (player.activeInstructions == true)
+        if (player.activeInstructions)
         {
             Room1SoundManager.instance.PlayPickUpgradeSound();
-            roominstructions.SetActive(true);
+            roomInstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
     }
@@ -35,7 +33,7 @@ public class Room1Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         player.activeInstructions = false;
-        roominstructions.SetActive(false);
+        roomInstructions.SetActive(false);
     }
 
     public void UpdateScore()

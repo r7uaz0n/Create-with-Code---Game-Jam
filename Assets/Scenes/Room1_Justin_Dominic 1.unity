@@ -10567,11 +10567,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 836813432}
   starCounter: {fileID: 712378391}
-  roominstructions: {fileID: 1062598850}
+  roomInstructions: {fileID: 1062598850}
   softStar: {fileID: 1935104042}
   quarry: {fileID: 72514668}
   pickPowerUp: {fileID: 1613461101}
-  animationScript: {fileID: 1860934645}
 --- !u!4 &1139433943
 Transform:
   m_ObjectHideFlags: 0
@@ -17776,18 +17775,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1860546984}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1860934645 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114000013971332034, guid: 8f226a393243a0141bace5fd6b60bafa,
-    type: 3}
-  m_PrefabInstance: {fileID: 1916010941}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935104042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff967b7ed48f2441bcf509edf6b889a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1873525477
 PrefabInstance:
   m_ObjectHideFlags: 0
