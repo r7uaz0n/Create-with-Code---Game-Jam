@@ -10,6 +10,7 @@ public class Room2Manager : MonoBehaviour
     [SerializeField] GameObject directionalLight = default;
     [SerializeField] GameObject enemy1 = default;
     [SerializeField] GameObject enemy2 = default;
+    [SerializeField] GameObject enemy3 = default;
 
     void Start()
     {
@@ -40,6 +41,7 @@ public class Room2Manager : MonoBehaviour
         bool keyCollectionStatus = GameState.CheckKeyCollectionStatus(GameState.KeyId.Room2);
         enemy1.SetActive(!keyCollectionStatus);
         enemy2.SetActive(!keyCollectionStatus);
+        enemy3.SetActive(!keyCollectionStatus);
         softStar.SetActive(!keyCollectionStatus);
         directionalLight.SetActive(keyCollectionStatus);
     }
