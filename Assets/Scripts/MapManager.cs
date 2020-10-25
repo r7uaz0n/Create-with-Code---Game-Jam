@@ -13,24 +13,26 @@ public class MapManager : MonoBehaviour
     public TextMeshProUGUI StarCounter;
     public Player player;
 
-  //  public GameObject Roominstructions;
-  //  public GameObject Softstar;
-  //  public AnimationScript animationScript;
+    public GameObject Roominstructions;
+
+
     private Boolean scoreAdded;
 
     void Start()
     {
+       // PlayerPrefs.GetInt("StarCounter", score).ToString();
+
         //prevent star in room 2 from being collected twice
         if (GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
         {
             score = 1;
-   //         Softstar.SetActive(false);
+
         }
         else if (!GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
         {
             score = 0;
             scoreAdded = false;
- //           Softstar.SetActive(true);
+
         }
     }
 
@@ -41,7 +43,7 @@ public class MapManager : MonoBehaviour
         //      Debug.Log(animationScript.wasCollected);
         if (player.activeInstructions == true)
         {
-   //         Roominstructions.SetActive(true);
+            Roominstructions.SetActive(true);
             StartCoroutine(PickInstructions());
         }
         //Debug.Log(GameState.checkKeyCollectionStatus(GameState.KeyId.Room2));
@@ -50,17 +52,14 @@ public class MapManager : MonoBehaviour
     {
         yield return new WaitForSeconds(3);
         player.activeInstructions = false;
-    //    Roominstructions.SetActive(false);
+        Roominstructions.SetActive(false);
     }
     public void UpdateScore()
     {
-   //     if (animationScript.wasCollected == true && scoreAdded == false)
-        {
-     //       score = score + 1;
-     //       scoreAdded = true;
-        }
+
         StarCounter.text = "Stars: " + score;
 
+        //PlayerPrefs.SetInt("StarCounter", score);
     }
 }
 

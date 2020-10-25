@@ -12,7 +12,7 @@ public class Room2Manager : MonoBehaviour
     public int score;
     public TextMeshProUGUI StarCounter;
     public Player player;
-
+    public GameObject enemy;
     public GameObject Roominstructions;
     public GameObject Softstar;
     public AnimationScript animationScript;
@@ -20,17 +20,22 @@ public class Room2Manager : MonoBehaviour
 
     void Start()
     {
+        //   PlayerPrefs.SetInt("StarCounter", score);
+       // PlayerPrefs.GetInt("StarCounter", score).ToString();
+
         //prevent star in room 2 from being collected twice
         if (GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
         {
             score = 1;
             Softstar.SetActive(false);
+            enemy.SetActive(false);
         }
         else if (!GameState.checkKeyCollectionStatus(GameState.KeyId.Room2))
         {
             score = 0;
             scoreAdded = false;
             Softstar.SetActive(true);
+            enemy.SetActive(true);
         }
     }
 
@@ -60,6 +65,8 @@ public class Room2Manager : MonoBehaviour
             scoreAdded = true;
         }
         StarCounter.text = "Stars: " + score;
+
+        //PlayerPrefs.SetInt("StarCounter", score);
 
     }
 }
