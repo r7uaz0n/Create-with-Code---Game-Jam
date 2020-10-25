@@ -918,6 +918,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4a3f3ffd080d8049a126bf726eb34d0, type: 3}
+--- !u!1 &1456231308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1022997644999530154, guid: 2a76d7e177c8db44a86325fa5f28373c,
+    type: 3}
+  m_PrefabInstance: {fileID: 94367625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1557600129
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +960,7 @@ MonoBehaviour:
   directionalLight: {fileID: 757310379}
   enemy1: {fileID: 1022997646471291265}
   enemy2: {fileID: 1794019120}
+  enemy3: {fileID: 1456231308}
 --- !u!4 &1557600131
 Transform:
   m_ObjectHideFlags: 0
